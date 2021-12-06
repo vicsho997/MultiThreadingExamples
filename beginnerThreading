@@ -1,0 +1,46 @@
+#Pass Callable Object
+from threading import Thread
+
+class Action:
+  def _init_(self, msg, reps):
+    self.msg = msg
+    self.reps = reps
+  def _call_(self):
+    for_ in range(self.reps):
+      print(self.msg)
+ 
+ action - Action("hi threading!", 3)
+ my_thread = Thread(target=action_
+ 
+ my thread.start()
+ 
+ # Pass Function Object
+ from threading import Thread
+ 
+ def say_hi(msg, reps):
+  for _ in range(reps)L
+    print(msg)
+    
+my_thread = Thread
+(
+  target=say_hi,
+  args=("hi threading", 3)
+)
+
+my_thread.start()
+
+#Override run()
+from threading import Thread
+ 
+ class HiThread(Thread):
+  def _init_(self, msg, reps):
+    Thread._init_(self)
+    self.reps = reps
+    self.msg = msg
+  
+  def run():
+    fpr _ in range(Self.reps):
+      print(self.msg)
+      
+my_thread = HiThread("hi threading", 3)
+my_thread.start()
